@@ -53,3 +53,11 @@ Based on the table above, below are the expected new future architecture:
 ![Fuun_Code_2](assets/img/Module%20Auth/Register%20Flow%20Diagram.png)
 ![Fuun_Code_3](assets/img/Module%20Auth/Login%20Flow%20Diagram.png)
 ![Fuun_Code_1](assets/img/Module%20Auth/Google%20OAuth%20Flow%20Diagram.png)
+
+## Pembayaran
+
+### Component Diagram
+![Daffa_Component](assets/img/Module%20Management%20Pembayaran/PembayaranComponentDiagram.png)
+
+### Code Diagram
+![Daffa_Code_1](assets/img/Module%20Management%20Pembayaran/PembayaranCodeDiagram.png)
