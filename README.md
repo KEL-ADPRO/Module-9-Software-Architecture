@@ -46,7 +46,7 @@ Based on the table above, below are the expected new future architecture:
 ## Authentication
 
 ### Component Diagram
-![Fuun_Component](assets/img/Module Auth/Component Diagram.png)
+![Fuun_Component](assets/img/Module%20Auth/Component%20Diagram.png)
 
 ### Code Diagram
 ![Fuun_Code_1](assets/img/Module%20Auth/Class%20Diagram.png)
