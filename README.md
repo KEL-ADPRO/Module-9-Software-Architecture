@@ -6,9 +6,16 @@
 ### Deployment Diagram
 ![deployment](assets/img/DeploymentDiagram.png)
 
-### Darrell
-## Code Diagram
+## Manajemen Kebun
+### Component Diagram
+![kebun_component](assets/img/Module%20Management%20Kebun/ModuleComponentDiagram.png)
+### Code Diagrams
+![kebun_repo_code](assets/img/Module%20Management%20Kebun/RepositoryCodeDiagram.png)
+![kebun_business_code](assets/img/Module%20Management%20Kebun/BusinessCodeDiagram.png)
+
+## Manajemen Pengiriman Hasil Panen
+### Code Diagram
 ![Darrell_Code](assets/img/Darrell_Code%20Diagram.png)
 
-## Component Diagram
+### Component Diagram
 ![Darrell_Component](assets/img/Darrell_Component%20Diagrm.png)
