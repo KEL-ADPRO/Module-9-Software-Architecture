@@ -17,10 +17,10 @@
 | No rate limiting on API Gateway. Mandor/Admin bulk actions could flood services. | API Gateway | Performace | Medium |
 
 Based on the table above, below are the expected new future architecture:
-- High Availability Gateway: Introduce a Load Balancer (like Nginx or AWS ALB) in front of multiple instances of the Spring Cloud Gateway.
-- Distributed Caching Layer: Integrate Redis to store session data and reduce database hits.
-- Object Storage Integration: Move file storage from the local container filesystem to an external S3-compatible Object Storage.
-- Sidecar or JWT Local Validation: Instead of the Gateway calling the Auth DB for every request, move JWT verification locally where each service can validate identity locally using a public key.
+- **High Availability Gateway**: Introduce a Load Balancer (like Nginx or AWS ALB) in front of multiple instances of the Spring Cloud Gateway.
+- **Distributed Caching Layer**: Integrate Redis to store session data and reduce database hits.
+- **Object Storage Integration**: Move file storage from the local container filesystem to an external S3-compatible Object Storage.
+- **Sidecar or JWT Local Validation**: Instead of the Gateway calling the Auth DB for every request, move JWT verification locally where each service can validate identity locally using a public key.
 
 ## Manajemen Kebun
 ### Component Diagram
