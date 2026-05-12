@@ -17,10 +17,17 @@
 | No rate limiting on API Gateway. Mandor/Admin bulk actions could flood services. | API Gateway | Performace | Medium |
 
 Based on the table above, below are the expected new future architecture:
-- **High Availability Gateway**: Introduce a Load Balancer (like Nginx or AWS ALB) in front of multiple instances of the Spring Cloud Gateway.
+- **High Availability Gateway**: Introduce a load balancer (like Nginx or AWS ALB) in front of multiple instances of the Spring Cloud Gateway.
 - **Distributed Caching Layer**: Integrate Redis to store session data and reduce database hits.
-- **Object Storage Integration**: Move file storage from the local container filesystem to an external S3-compatible Object Storage.
-- **Sidecar or JWT Local Validation**: Instead of the Gateway calling the Auth DB for every request, move JWT verification locally where each service can validate identity locally using a public key.
+- **Object Storage Integration**: Move file storage from the local container filesystem to an external S3-compatible object storage.
+- **Sidecar or JWT Local Validation**: Instead of the gateway calling the Auth DB for every request, move JWT verification locally where each service can validate identity locally using a public key.
+
+### Risk Storming Justification
+
+1. **Scalability**: By introducing Redis and object storage, we decouple the compute from the state. This allows the services to scale horizontally during peak usage without worrying about data consistency or local storage limits.
+2. **Reliability**: Moving to a multi-instance gateway with a load balancer eliminates the single API Gateway bottleneck. If one gateway instance fails, the system remains operational, ensuring users can always use the platform.
+3. **Performance**: Using localized JWT verification for decentralized authentication removes the Auth DB bottleneck. Services no longer wait for a round-trip to the User Service for every operation, significantly improving the responsiveness of the platform.
+4, **Security**: Implementing rate limiting at the gateway level protects the internal infrastructure from 'noisy neighbor' issues or intentional DDoS attacks, ensuring that critical functions are never delayed by bulk system actions.
 
 ## Manajemen Kebun
 ### Component Diagram
