@@ -11,7 +11,7 @@
 | Risk | Point of Failure | Impact | Severity |
 | :------: | :------: | :------: | :------: |
 | Single API Gateway is a bottleneck. As the only entry point for React and Mobile, a gateway crash results in total system downtime. | API Gateway | Availability | High |
-| All microservices share separate DBs but Auth DB is a dependency for every service. If every request requires a synchronous call to the User Service to verify roles, latency increases exponentially and the User Service becomes a throughput bottleneck. | Performance and Coupling | Auth Service | High |
+| All microservices share separate DBs but Auth DB is a dependency for every service. If every request requires a synchronous call to the User Service to verify roles, latency increases exponentially and the User Service becomes a throughput bottleneck. | Auth Service | Performance and Coupling | High |
 | Payroll and Harvest records are high-volume. Without a caching layer, both services can put an unnecessary large load on the database. | Payroll and Harvest Services | Scalability | Medium |
 | File storage (harvest photos) is not defined in deployment. It is thus unscalable and any data is lost if the container restarts. | Harvest Service | Scalability, Reliability, and Data Integrity | Medium |
 | No rate limiting on API Gateway. Mandor/Admin bulk actions could flood services. | API Gateway | Performace | Medium |
