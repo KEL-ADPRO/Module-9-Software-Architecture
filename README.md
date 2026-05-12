@@ -15,7 +15,7 @@
 
 ## Manajemen Pengiriman Hasil Panen
 ### Code Diagram
-![Darrell_Code](assets/img/Darrell_Code%20Diagram.png)
+![Darrell_Code](assets/img/Module%20Pengiriman/Darrell_Code%20Diagram.png)
 
 ### Component Diagram
-![Darrell_Component](assets/img/Darrell_Component%20Diagrm.png)
+![Darrell_Component](assets/img/Module%20Pengiriman/Darrell_Component%20Diagrm.png)
